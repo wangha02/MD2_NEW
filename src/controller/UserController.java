@@ -76,5 +76,10 @@ public class UserController {
 
     public User getCurrentUser() {
         return userService.getCurrentUser();
+
+    }
+
+    public void logout() {
+        userService.saveCurrentUser(null);
     }
 }

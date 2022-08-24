@@ -30,7 +30,36 @@ public class UserServiceIMPL implements IUserService {
     @Override
     public void save(User user) {
         userList.add(user);
+        updateData();
+    }
+
+    @Override
+    public void remove(int id) {
+        userList.remove(findById(id));
         config.write(PATH_USER, userList);
+        updateData();
+
+    }
+
+    @Override
+    public User findById(int id) {
+        for (User user : userList) {
+            if (user.getId() == id) {
+                return user;
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public void updateData() {
+        config.write(PATH_USER, userList);
+
+    }
+
+    @Override
+    public void deleteById(int id) {
+
     }
 
     @Override
@@ -65,14 +94,15 @@ public class UserServiceIMPL implements IUserService {
 
     @Override
     public User getCurrentUser() {
-        User user= new Config<User>().read(PATH_USER_LOGIN); //chỉ trả về là 1 user.user trong file txt...tìm user list để trả về
-
+        User user = new Config<User>().read(PATH_USER_LOGIN); //chỉ trả về là 1 user.user trong file txt...tìm user list để trả về
+        if (user == null)
+            return null;
         return findByUsername(user.getUsername()); // lấy username của nó
     }
 
     @Override
     public void saveCurrentUser(User user) {
-        new Config<User>().write(PATH_USER_LOGIN,user);
+        new Config<User>().write(PATH_USER_LOGIN, user);
 
     }
 

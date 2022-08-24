@@ -1,5 +1,8 @@
 package config;
 
+import controller.UserController;
+import view.ViewTruyenCoTich;
+
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
@@ -38,6 +41,6 @@ public class Config<T> {
         } catch (Exception e) {
             System.out.println("Error writing");
         }
-    }
 
+    }
 }
