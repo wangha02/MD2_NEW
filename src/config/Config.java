@@ -1,8 +1,5 @@
 package config;
 
-import controller.UserController;
-import view.ViewTruyenCoTich;
-
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;

@@ -19,11 +19,14 @@ public class ViewMainMenu {
     List<User> userList = userController.getUserList();
 
     public void menu() {
-        System.out.println("+-----------MENU-----------+");
-        System.out.println("|1. Show User list         |");
-        System.out.println("|2. Register               |");
-        System.out.println("|3. Login                  |");
-        System.out.println("+--------------------------+");
+        System.out.println("╔════════════════════════════╗");
+        System.out.println("║            MENU            ║");
+        System.out.println("╠════════════════════════════╣");
+        System.out.println("║ 1. Show User list          ║");
+        System.out.println("║ 2. Register                ║");
+        System.out.println("║ 3. Login                   ║");
+        System.out.println("╚════════════════════════════╝");
+
         int choice = Integer.parseInt(Config.scanner().nextLine());
 
         switch (choice) {

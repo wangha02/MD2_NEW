@@ -1,6 +1,7 @@
 package service.user;
 
 import config.Config;
+import model.Story;
 import model.User;
 
 import java.util.ArrayList;
@@ -28,9 +29,10 @@ public class UserServiceIMPL implements IUserService {
     }
 
     @Override
-    public void save(User user) {
+    public List<Story> save(User user) {
         userList.add(user);
         updateData();
+        return null;
     }
 
     @Override

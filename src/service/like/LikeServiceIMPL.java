@@ -2,6 +2,7 @@ package service.like;
 
 import config.Config;
 import model.LikeStory;
+import model.Story;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,9 +28,10 @@ public class LikeServiceIMPL implements ILikeService {
     }
 
     @Override
-    public void save(LikeStory like) {
+    public List<Story> save(LikeStory like) {
         likeList.add(like);
         updateData();
+        return null;
     }
 
     @Override

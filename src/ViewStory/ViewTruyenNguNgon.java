@@ -1,16 +1,23 @@
-package view;
+package ViewStory;
 
 import config.Config;
+import controller.StoryController;
+import model.Story;
+
+import java.util.List;
 
 public class ViewTruyenNguNgon {
 
+    StoryController storyController = new StoryController();
+
+    List<Story> storyList = storyController.showListStory();
+
+
     public void nguNgon() {
         System.out.println("0. Back Out");
-        System.out.println("1. Cao Va Qua ");
-        System.out.println("2. Tho Va Rua ");
-        System.out.println("3. Tho Va Chuot");
-        System.out.println("4. Tho Va Cho Soi");
-
+        for (int i = 0; i < storyList.size() ; i++) {
+            System.out.println(storyList.get(i));
+        }
         int choice = Integer.parseInt(Config.scanner().nextLine());
 
         switch (choice) {

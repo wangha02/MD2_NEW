@@ -1,12 +1,14 @@
 package service;
 
+import model.Story;
+
 import java.util.List;
 
 public interface IGenericService<T> {
 
     List<T> findAll();
 
-    void save(T t);
+    List<Story> save(T t);
 
     //CRUD
     void remove(int id);
@@ -16,5 +18,7 @@ public interface IGenericService<T> {
     void updateData();
 
     void deleteById(int id);
+
+
 
 }
