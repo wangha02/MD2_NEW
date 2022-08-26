@@ -8,7 +8,7 @@ public interface IGenericService<T> {
 
     List<T> findAll();
 
-    List<Story> save(T t);
+    void save(T t);
 
     //CRUD
     void remove(int id);
@@ -20,5 +20,16 @@ public interface IGenericService<T> {
     void deleteById(int id);
 
 
+//    boolean existsByUsername(String username);
+//
+//    boolean existsByEmail(String email);
+//
+//    boolean checkLogin(String username, String password);
+//
+//    User getCurrentUser();
+//
+//    void saveCurrentUser(User user);
+//
+//    User findByUsername(String username);
 
 }

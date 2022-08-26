@@ -3,6 +3,7 @@ package service.storyCoTich;
 import model.Story;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class FairyTaleServiceIMPL implements IFairyTaleService {
@@ -41,8 +42,10 @@ public class FairyTaleServiceIMPL implements IFairyTaleService {
     }
 
     @Override
-    public List<Story> sortByStory() {
-        return null;
+    public List<Story> sortByName() {
+        Collections.sort(listStory);
+        updateData();
+        return listStory;
     }
 
     @Override
@@ -70,7 +73,7 @@ public class FairyTaleServiceIMPL implements IFairyTaleService {
                 stories.add(story);
             }
         }
-        return null;
+        return listStory;
     }
 
     @Override

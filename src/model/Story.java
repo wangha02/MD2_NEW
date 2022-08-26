@@ -1,6 +1,8 @@
 package model;
 
-public class Story implements Comparable<Story> {
+import java.io.Serializable;
+
+public class Story implements Comparable<Story>, Serializable {
 
     private int id;
     private String name;

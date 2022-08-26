@@ -2,15 +2,15 @@ package model;
 
 import java.io.Serializable;
 
-public class LikeStory implements Serializable {
+public class Like implements Serializable {
     private int id;
     private int idSong;
     private int idUser;
 
-    public LikeStory() {
+    public Like() {
     }
 
-    public LikeStory(int id, int idSong, int idUser) {
+    public Like(int id, int idSong, int idUser) {
         this.id = id;
         this.idSong = idSong;
         this.idUser = idUser;

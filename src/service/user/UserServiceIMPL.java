@@ -1,14 +1,12 @@
 package service.user;
 
 import config.Config;
-import model.Story;
 import model.User;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class UserServiceIMPL implements IUserService {
-
     static String PATH_USER = "src/database/user.txt";
     static String PATH_USER_LOGIN = "src/database/user_login.txt";
     static Config<List<User>> config = new Config<>();
@@ -29,10 +27,9 @@ public class UserServiceIMPL implements IUserService {
     }
 
     @Override
-    public List<Story> save(User user) {
+    public void save(User user) {
         userList.add(user);
         updateData();
-        return null;
     }
 
     @Override
@@ -118,3 +115,4 @@ public class UserServiceIMPL implements IUserService {
         return null;
     }
 }
+

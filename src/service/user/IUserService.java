@@ -15,4 +15,6 @@ public interface IUserService extends IGenericService<User> {
     void saveCurrentUser(User user);
 
     User findByUsername(String username);
+
+
 }

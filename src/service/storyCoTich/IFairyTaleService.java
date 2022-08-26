@@ -11,7 +11,7 @@ public interface IFairyTaleService {
 
     List<Story> edit(int id, String name); //3
 
-    List<Story> sortByStory(); //4
+    List<Story> sortByName(); //4
 
     List<Story> search(String name); //5
 

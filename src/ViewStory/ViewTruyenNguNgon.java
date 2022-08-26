@@ -1,6 +1,7 @@
 package ViewStory;
 
 import config.Config;
+import controller.StoriesController;
 import controller.StoryController;
 import model.Story;
 
@@ -8,22 +9,22 @@ import java.util.List;
 
 public class ViewTruyenNguNgon {
 
-    StoryController storyController = new StoryController();
+    StoriesController storiesController = new StoriesController();
 
-    List<Story> storyList = storyController.showListStory();
+    List<Story> storyList = storiesController.showListStories();
 
 
     public void nguNgon() {
-        System.out.println("0. Back Out");
+        System.out.println("0. Backs ");
         for (int i = 0; i < storyList.size() ; i++) {
-            System.out.println(storyList.get(i));
+            System.out.println("► " + storyList.get(i).getId() + ". " + storyList.get(i).getName());
+//            System.out.println(storyList.get(i));
         }
         int choice = Integer.parseInt(Config.scanner().nextLine());
 
         switch (choice) {
             case 0:
                 new ViewTheLoai().theLoai();
-            case 1:
                 break;
 
         }

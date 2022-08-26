@@ -10,6 +10,7 @@ public class StoryController {
 
     private final IFairyTaleService iFairyTaleService = new FairyTaleServiceIMPL();
 
+
     public List<Story> getStory(){
         return iFairyTaleService.findAll();
     }
@@ -17,6 +18,12 @@ public class StoryController {
     public List<Story> showListStory() {
         return iFairyTaleService.findAll();
     }
+
+
+    public List<Story> findById(int id){
+        return iFairyTaleService.findById(id);
+    }
+
 
     public List<Story> createStory(String name) {
         return iFairyTaleService.save(new Story(showListStory().size()+1, name));
@@ -27,16 +34,13 @@ public class StoryController {
     }
 
     public List<Story> sortStory(){
-        return iFairyTaleService.sortByStory();
-    }
-
-    public List<Story> findStoryById(int id){
-        return iFairyTaleService.findById(id);
+        return iFairyTaleService.sortByName();
     }
 
     public List<Story> deleteStory(int id) {
         return iFairyTaleService.deleteById(id);
     }
+
 
 
 }
