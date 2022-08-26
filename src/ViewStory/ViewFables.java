@@ -2,12 +2,11 @@ package ViewStory;
 
 import config.Config;
 import controller.StoriesController;
-import controller.StoryController;
 import model.Story;
 
 import java.util.List;
 
-public class ViewTruyenNguNgon {
+public class ViewFables {
 
     StoriesController storiesController = new StoriesController();
 
@@ -24,7 +23,7 @@ public class ViewTruyenNguNgon {
 
         switch (choice) {
             case 0:
-                new ViewTheLoai().theLoai();
+                new ViewCategoryStory().theLoai();
                 break;
 
         }

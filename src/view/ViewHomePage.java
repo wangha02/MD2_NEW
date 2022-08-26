@@ -1,6 +1,6 @@
 package view;
 
-import ViewStory.ViewTheLoai;
+import ViewStory.ViewCategoryStory;
 import config.Config;
 import controller.LikeController;
 import controller.StoryController;
@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class ViewHome {
+public class ViewHomePage {
 
     Scanner scanner = new Scanner(System.in);
 
@@ -33,7 +33,7 @@ public class ViewHome {
     RoleName roleName = new ArrayList<>(currentUser.getRoles()).get(0).getRoleName(); // chấm gét 0 bởi vì chỉ có đúng 1 phần tử...là chỉ đăng nhập đc 1 tài khoản
 
 
-    public ViewHome() {
+    public ViewHomePage() {
         switch (roleName) {
             case ADMIN:
                 menuAdmin();
@@ -62,7 +62,7 @@ public class ViewHome {
                 break;
             // thêm các chức năng case
             case 2:
-                new ViewTheLoai().theLoai();
+                new ViewCategoryStory().theLoai();
                 break;
             case 3:
                 formShowSongList();

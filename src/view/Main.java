@@ -12,7 +12,7 @@ public class Main {
         if (currentUser == null) {
             new ViewMainMenu().menu();
         }else {
-            new ViewHome();
+            new ViewHomePage();
         }
     }
 

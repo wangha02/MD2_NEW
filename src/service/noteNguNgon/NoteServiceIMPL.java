@@ -3,27 +3,26 @@ package service.noteNguNgon;
 
 import config.Config;
 import model.Note;
-import model.Story;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class NoteService implements INoteNguNgon {
-
-    public static List<Note> noteList = new ArrayList<>();
-
+public class NoteServiceIMPL implements INoteFables {
     static String PATH_NOTE = "C:\\Users\\Admin\\Downloads\\MD2-Role-master\\src\\database\\note.txt";
 
-    static Config<List<Story>> notefig = new Config<>();
+    static Config<List<Note>> config = new Config<>();
+
+    static List<Note> noteList = config.read(PATH_NOTE);
 
     static {
-        if (notefig == null) {
-            notefig = new Config<>();
+        if (noteList == null) {
+            noteList = new ArrayList<>();
         }
     }
 
     @Override
     public List<Note> findAll() {
-        return null;
+        config.write(PATH_NOTE,noteList);
+        return noteList;
     }
 }

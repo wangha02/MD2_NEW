@@ -75,7 +75,7 @@ public class ViewMainMenu {
         switch (responseMessenger.getMessage()) {
             case "login_success":
                 System.out.println("Login successful!");
-                new ViewHome();
+                new ViewHomePage();
                 break;
             case "login_failure":
                 System.out.println("Username or password is incorrect!");

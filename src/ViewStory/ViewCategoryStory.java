@@ -1,13 +1,11 @@
 package ViewStory;
 
-import ViewStory.ViewTruyenCoTich;
-import ViewStory.ViewTruyenNguNgon;
 import config.Config;
 import controller.UserController;
 
 import java.util.Scanner;
 
-public class ViewTheLoai {
+public class ViewCategoryStory {
     Scanner scanner = new Scanner(System.in);
 
     UserController userController = new UserController();
@@ -23,10 +21,10 @@ public class ViewTheLoai {
 
         switch (choice) {
             case 1:
-                new ViewTruyenCoTich().coTich();
+                new ViewFairyTale().FairyTale();
                 break;
             case 2:
-                new ViewTruyenNguNgon().nguNgon();
+                new ViewFables().nguNgon();
                 break;
         }
     }

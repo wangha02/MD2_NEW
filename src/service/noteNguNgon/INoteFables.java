@@ -4,6 +4,7 @@ import model.Note;
 
 import java.util.List;
 
-public interface INoteNguNgon {
+public interface INoteFables {
     List<Note> findAll();
+
 }

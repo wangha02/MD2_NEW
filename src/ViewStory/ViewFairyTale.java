@@ -6,14 +6,14 @@ import model.Story;
 
 import java.util.List;
 
-public class ViewTruyenCoTich {
+public class ViewFairyTale {
 
     StoryController storyController = new StoryController();
 
     List<Story> storyList = storyController.showListStory();
 
 
-    public void coTich() {
+    public void FairyTale() {
         //USER
         System.out.println("0. Back ");
         System.out.println("1. Nhập 1 để đọc truyện");
@@ -25,7 +25,7 @@ public class ViewTruyenCoTich {
 
         switch (choice) {
             case 0:
-                new ViewTheLoai().theLoai();
+                new ViewCategoryStory().theLoai();
                 break;
                 case 1:
 
